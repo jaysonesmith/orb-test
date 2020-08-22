@@ -2,7 +2,8 @@ version: 2.1
 
 jobs:
   install-node-example:
-    executor: node/default
+    docker:
+      - image: cimg/base:stable
     steps:
       - checkout
       - node/install:
