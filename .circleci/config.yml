@@ -1,19 +1,17 @@
 version: 2.1
 
+orbs:
+  node: jaysonesmith/demo@dev:0.1.0
+
 jobs:
-  install-node-example:
+  orb-use-example:
     docker:
       - image: cimg/base:stable
     steps:
-      - checkout
-      - node/install:
-          install-yarn: true
-      - run: node --version
-
-orbs:
-  node: circleci/node@4.0.0
+      - yell/yell:
+          person: Jayson
 
 workflows:
   test_my_app:
     jobs:
-      - install-node-example
+      - orb-use-example
