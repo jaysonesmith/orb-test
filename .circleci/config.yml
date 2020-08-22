@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  yell: jaysonesmith/demo@dev:0.1.0
+  yell: jaysonesmith/demo@dev:0.0.4
 
 jobs:
   orb-use-example:
